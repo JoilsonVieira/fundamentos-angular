@@ -1,0 +1,8 @@
+<h1>Requisição da API</h1>
+<div *ngFor="let dadosUsuario of usuarios">
+    <div>Nome: {{dadosUsuario.name}}</div>
+    <div>E-mail: {{dadosUsuario.email}}</div>
+    <div>Endereço: {{dadosUsuario.address.street}}, {{dadosUsuario.address.city}}, {{dadosUsuario.address.zipcode}}
+    </div>
+    <hr>
+</div>
