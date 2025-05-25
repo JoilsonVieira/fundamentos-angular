@@ -9,7 +9,8 @@ import { CepComponent } from './cep/cep.component';
 import { DogComponent } from './dog/dog.component';
 import { AnimeComponent } from './anime/anime.component';
 import { NgModelComponent } from './ng-model/ng-model.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,10 @@ import { FormsModule } from '@angular/forms';
     DogComponent,
     AnimeComponent,
     NgModelComponent,
+    ReactiveFormsComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

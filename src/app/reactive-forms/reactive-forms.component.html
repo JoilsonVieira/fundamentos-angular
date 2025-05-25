@@ -1,0 +1,12 @@
+<h1>Formulário - Reactive Forms</h1>
+
+<form [formGroup]="formulario" (ngSubmit)="submeterFormulario()"
+    style="display: flex; flex-direction: column; gap:10px;">
+    <input type="text" placeholder="Nome" formControlName="nome">
+    <small *ngIf="formulario.controls['nome']?.invalid && formulario.controls['nome'].touched">O Nome é
+        obrigatório</small>
+    <input type="number" placeholder="Idade" formControlName="idade">
+    <input type="email" placeholder="E-mail" formControlName="email">
+    <hr>
+    <button type="submit">Enviar</button>
+</form>
