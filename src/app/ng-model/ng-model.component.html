@@ -1,0 +1,14 @@
+<h1>Formulário com NgModel</h1>
+
+<form #form="ngForm" (ngSubmit)="submeterFormulario(form)" style="display: flex; flex-direction: column; gap:10px;">
+    <input type="text" placeholder="Nome" name="nome" [(ngModel)]="formulario.nome" required>
+    <small *ngIf="form.controls['nome']?.invalid && form.controls['nome'].touched">O Nome é obrigatório</small>
+
+    <input type="number" placeholder="Idade" name="idade" [(ngModel)]="formulario.idade" required>
+    <small *ngIf="form.controls['idade']?.invalid && form.controls['idade'].touched">O Idade é obrigatório</small>
+
+    <input type="email" placeholder="E-mail" name="email" [(ngModel)]="formulario.email" required>
+    <small *ngIf="form.controls['email']?.invalid && form.controls['email'].touched">O E-mail é obrigatório</small>
+    <hr>
+    <button type="submit">Enviar</button>
+</form>

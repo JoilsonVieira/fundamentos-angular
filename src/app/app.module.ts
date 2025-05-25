@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CepComponent } from './cep/cep.component';
 import { DogComponent } from './dog/dog.component';
 import { AnimeComponent } from './anime/anime.component';
+import { NgModelComponent } from './ng-model/ng-model.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { AnimeComponent } from './anime/anime.component';
     CepComponent,
     DogComponent,
     AnimeComponent,
+    NgModelComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
